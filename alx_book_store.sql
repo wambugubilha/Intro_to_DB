@@ -43,7 +43,7 @@ CREATE TABLE Order_Details (
     orderdetail_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     book_id INT,
-    quantity INT NOT NULL CHECK (quantity > 0),
+    quantity DOUBLE INT,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
